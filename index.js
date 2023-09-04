@@ -13,7 +13,6 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 8000;
 
-
 // Database connectivity
 mongoose.set("strictQuery", false);
 const connect = async () => {
@@ -27,11 +26,6 @@ const connect = async () => {
         console.error("MongoDB connection error:", err);
     } 
 };
-
-const corsOptions = {
-    origin:true,
-    credentials:true
-}
 
 app.use(express.json());
 app.use(cors());
